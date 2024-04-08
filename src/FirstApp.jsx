@@ -20,10 +20,35 @@
 // }
 
 // Sinónimo del fragmento////////////////
+// export const FirstApp = () => {
+//     return (
+//         <>
+//             <h1>Jose Patiño</h1>
+//             <p>im a subtitle</p>
+//         </>
+//     )
+// }
+
+// Fuera del componente no se tiene que procesar de nuevo
+const newMessage = {
+    message: 'Hola mundo',
+    title: 'Message'
+}
+
+const getMessage = () => 'Mensaje de la función';
 export const FirstApp = () => {
+
+    // Aquí adentro se especifica de nuevo el espacio de memoria de la función. Es recomendable hacerlo afuera
+    const getResult = (a, b) => {
+        return a+b;
+    }
+
     return (
         <>
-            <h1>Jose Patiño</h1>
+            {/*<code>{ JSON.stringify(newMessage) }</code>*/}
+            {/*<h1>{ JSON.stringify(newMessage) }</h1>*/}
+            <h1>{ getMessage() }</h1>
+            <h1>{ getResult(2, 3) }</h1>
             <p>im a subtitle</p>
         </>
     )
