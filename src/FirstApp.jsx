@@ -47,8 +47,9 @@ export const FirstApp = () => {
         <>
             {/*<code>{ JSON.stringify(newMessage) }</code>*/}
             {/*<h1>{ JSON.stringify(newMessage) }</h1>*/}
-            <h1>{ getMessage() }</h1>
-            <h1>{ getResult(2, 3) }</h1>
+            {/*<h1>{ getMessage() }</h1>*/}
+            {/*<h1>{ getResult(2, 3) }</h1>*/}
+            <h1>Jose</h1>
             <p>im a subtitle</p>
         </>
     )
