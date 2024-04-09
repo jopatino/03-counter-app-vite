@@ -38,7 +38,7 @@ const newMessage = {
 }
 
 const getMessage = () => 'Mensaje de la función';
-export const FirstApp = ({ title, subTitle }) => {
+export const FirstApp = ({ title, subTitle, name }) => {
 
     console.log(title)
     // Aquí adentro se especifica de nuevo el espacio de memoria de la función. Es recomendable hacerlo afuera
@@ -58,11 +58,19 @@ export const FirstApp = ({ title, subTitle }) => {
             {/*<h1>{ getResult(2, 3) }</h1>*/}
             <h1>{ title }</h1>
             <p>{ subTitle }</p>
+            <p>{ name }</p>
         </>
     )
 }
 
 FirstApp.propTypes = {
     title: PropTypes.string.isRequired,
-    subTitle: PropTypes.number.isRequired,
+    subTitle: PropTypes.string.isRequired,
+}
+
+// Default props se leen antes que los propTypes Se recomiendan poner al final
+FirstApp.defaultProps= {
+    title: 'No hay título',
+    subTitle: 'No hay sbutítulo',
+    name: 'Jose Patiño'
 }
