@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 // export const FirstApp = () => {
 //     return (
 //         <div class="row">
@@ -36,12 +38,17 @@ const newMessage = {
 }
 
 const getMessage = () => 'Mensaje de la función';
-export const FirstApp = () => {
+export const FirstApp = ({ title, subTitle }) => {
 
+    console.log(title)
     // Aquí adentro se especifica de nuevo el espacio de memoria de la función. Es recomendable hacerlo afuera
-    const getResult = (a, b) => {
-        return a+b;
-    }
+    // const getResult = (a, b) => {
+    //     return a+b;
+    // }
+
+    // if (!title) {
+    //     throw new Error('El title no existe');
+    // }
 
     return (
         <>
@@ -49,8 +56,13 @@ export const FirstApp = () => {
             {/*<h1>{ JSON.stringify(newMessage) }</h1>*/}
             {/*<h1>{ getMessage() }</h1>*/}
             {/*<h1>{ getResult(2, 3) }</h1>*/}
-            <h1>Jose</h1>
-            <p>im a subtitle</p>
+            <h1>{ title }</h1>
+            <p>{ subTitle }</p>
         </>
     )
+}
+
+FirstApp.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.number.isRequired,
 }
